@@ -1,0 +1,67 @@
+from tkinter import *
+
+def Chapter() :
+    for w in fen.winfo_children():
+        w.destroy()
+    fen.pack_propagate(0)
+
+    T = Text(fen, wrap = WORD, height = 400, width = 400)
+
+    c = """ Chapter 2
+
+    Le chocolat est un aliment qui en a rendu plus d’un accro.
+    Aude en fait partie, mais son amour pour le chocolat est bien trop fort et risque de la tuer, comme ce fut le cas cette fois-ci.
+
+    La petite chiwawa était confortablement endormie sur son ami le bébé ours Uriel.
+    Celui-ci était bien trop occupé à parler à son voisin, Sahire le dalmatien, pour se préoccuper de la petite.
+
+    Tout à coup, un jeune lion apparut devant les 3 amis rassemblés. Il s’agissait de Malick
+    Malick était connu pour sa joie de vivre et son extraversion. Il était convivial et joyeux
+    Néanmoins, Malick avait une face cachée que peu connaissaient.
+    Malick était un manipulateur et il aimait plus que tout embrouiller ses proies.
+    Apprenant qu’Aude était chocolativore, il décida de lui jouer un tour.
+
+    Uriel et Sahire étaient trop occupés pour se rendre compte que quelque chose clochait, et ils étaient seuls dans le parc cette fois ci
+
+    Malick réveilla gentillement Aude en lui tapotant le pied
+    < Qu’est ce qu’il y’a ?> demanda Aude énervée d’avoir été réveillée
+    < Je ne sais pas, je ne sais plus. Qui suis-je ? Qui es tu ? Qui sommes-nous ? Nos noms nous définissent-il ? Qu’est ce qui définit un être humain ?>
+    < Malick pardon si c’est pour dire des choses comme ça dans mon oreille->
+    < Non en vrai je voulais te dire que quelqu’un est est venu, il veut te voir. >
+    <Me voir pour faire quoi ?>
+    < Je ne sais pas. Il ne me l’a pas dit, mais j’ai vu qu’il avait beaucoup de chocolats dans son sac>
+
+    La simple mention de chocolat réussit à réveiller complètement la jeune dame. Elle se leva complètement, demandant de plus amples informations au lion.
+    A leurs côtés, cachée dans les herbes, se trouvait un serpent dont la couleur des écailles se confondait à celle de l’herbe. Lola le chat, s’était transformée
+    en un serpent afin d’espionner plus facilement ses “proies” comme elle aimait à le dire. Sachant immédiatement qu’il s’agissait d’une histoire bizarre,
+    Lola se dit qu’enfin quelque chose de drôle allait arriver dans le voisinage.
+
+    Lola, cachée derrière le lion et le chiwawa, se rendit avec eux à l’entrée du parc où ils trouvèrent un paquet. Sur le paquet se trouva une carte qu’Aude s’empressa de lire
+    < Joyeux anniversaire, ton ami chéri>
+    Ne sachant pas réellement de qui il s’agissait et commençant à être sceptique, Aude voulut se retourner mais Malick, à coup de belles paroles dont même Lola était touchée, finit par lui faire changer d’avis.
+
+    En ouvrant le paquet, Aude trouva des boîtes de chocolat. Ses soupçons envolés, Aude se jeta sur la première boite et l’ouvrit.
+
+    Un cri résonna dans le quartier et les alentours. Dans la boite ne se trouvait pas des chocolats mais plutôt des asticots.
+
+    <FIN>"""
+    T.insert(END, c)
+    T.configure(state = 'disabled')
+    #scrollbar = Scrollbar(fen)
+    #scrollbar.pack(side = RIGHT, fill = Y)
+    T.pack(side = LEFT, fill = Y)
+
+
+
+fen = Tk()
+
+lab = Label(fen, text = "Bienvenue !!!!! ")
+labe = Label(fen, text = " Cliquez sur le boutton juste en bas pour avoir accès au chapitre 2 !!!!")
+
+btn = Button(fen, text = " Click Me", command = Chapter)
+
+lab.pack()
+labe.pack()
+btn.pack()
+
+fen.mainloop()
